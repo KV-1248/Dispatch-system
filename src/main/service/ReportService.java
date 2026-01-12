@@ -19,13 +19,7 @@ public class ReportService {
         this.busyNodes = new HashMap<>();
     }
 
-    /**
-     * Records analytics when a trip is DISPATCHED
-     *
-     * @param waitTime   ETA / distance from driver to rider
-     * @param pickupNode pickup location node
-     */
-    public void recordTrip(int waitTime, int pickupNode) {
+        public void recordTrip(int waitTime, int pickupNode) {
         totalWaitTime += waitTime;
 
         // HashMap frequency counting
@@ -42,7 +36,7 @@ public class ReportService {
 
     //Generates and prints system report
     public void generateReport() {
-        System.out.println("\n===== SYSTEM REPORT =====");
+        System.out.println("\n SYSTEM REPORT");
 
         if (completedRides > 0) {
             double avgWait = (double) totalWaitTime / completedRides;
