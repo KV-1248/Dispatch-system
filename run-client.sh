@@ -5,9 +5,12 @@ echo "  RIDE DISPATCH CLIENT - STARTING"
 echo "========================================="
 echo ""
 
-# Compile client files
+# Create bin directory if it doesn't exist
+mkdir -p bin
+
+# Compile client files (only Client.java and Protocol.java needed)
 echo "Compiling client files..."
-javac -d bin src/main/network/*.java src/main/model/*.java
+javac -d bin src/main/network/Client.java src/main/network/Protocol.java
 
 if [ $? -eq 0 ]; then
     echo "Compilation successful!"
